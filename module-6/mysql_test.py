@@ -8,7 +8,7 @@ secrets = dotenv_values(".env")
 
 config = {
     'user': secrets['root'],
-    'password': secrets['Thisistheway5*'],
+    'password': secrets['password'],
     'host': secrets['localhost'],     
     'database': secrets['movies'], 
     'raise_on_warnings': secrets["RAISE_ON_WARNING"]
