@@ -1,12 +1,17 @@
 import mysql.connector
 from mysql.connector import errorcode
 
+import dotenv
+from dotenv import dotenv_values
+
+secrets = dotenv_values(".env")
+
 config = {
-    'user': 'root'
-    'password': 'Thisistheway5*',
-    'host': 'localhost',     
-    'database': 'movies', 
-    'raise_on_warinings': True
+    'user': secrets['root'],
+    'password': secrets['password'],
+    'host': secrets['localhost'],     
+    'database': secrets['movies'], 
+    'raise_on_warnings': secrets["RAISE_ON_WARNING"]
 }
 
 try:
