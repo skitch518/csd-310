@@ -7,11 +7,11 @@ from dotenv import dotenv_values
 secrets = dotenv_values(".env")
 
 config = {
-    'user': secrets['root'],
-    'password': secrets['password'],
-    'host': secrets['localhost'],     
-    'database': secrets['movies'], 
-    'raise_on_warnings': secrets["RAISE_ON_WARNING"]
+    'user': secrets['USER'],
+    'password': secrets['PASSWORD'],
+    'host': secrets['HOST'],     
+    'database': secrets['DATABASE'], 
+    'raise_on_warnings': secrets['RAISE_ON_WARNING']
 }
 
 try:
